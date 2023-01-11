@@ -1,6 +1,6 @@
 var button = document
 
-function lerMensagem() {
+function criptografarMensagem() {
   let mensagem = document.querySelector('textarea').value.split('')
 
   let caracteresParaAlterar = ['a', 'e', 'i', 'o', 'u']
@@ -15,13 +15,34 @@ function lerMensagem() {
     }
   }
   mensagem = mensagem.join('')
+  let imagem = document.getElementsByClassName('img-criptografia')[0]
+  let informacoes = document.getElementsByTagName('p')
+
+  imagem.style.display = 'none'
+  for (let i = 1; i < informacoes.length - 1; i++) {
+    informacoes[i].style.display = 'none'
+    informacoes[i + 1].style.display = 'none'
+  }
+  let campoMensagem = document.getElementsByClassName('mensagem-criada')[0]
+  campoMensagem.style.display = 'block'
+  campoMensagem.innerHTML = mensagem
 }
 
 function alterarTelaCriptografia() {
   let imagem = document.getElementsByClassName('img-criptografia')[0]
-  let 
-  if (document.querySelector('textarea').value.trim().length > 0){
+  let informacoes = document.getElementsByTagName('p')
+  if (document.querySelector('textarea').value.trim().length > 0) {
     imagem.src = 'images/fox-g452e24e6a_640.png'
+    for (let i = 1; i < informacoes.length - 1; i++) {
+      informacoes[i].innerHTML = '...............'
+      informacoes[i + 1].innerHTML = ''
+    }
+  } else {
+    imagem.src = 'images/fox-g8ef2924b6_640.png'
+    for (let i = 1; i < informacoes.length - 1; i++) {
+      informacoes[i].innerHTML = 'Nenhuma mensagem encontrada'
+      informacoes[i + 1].innerHTML =
+        'Digite o texto que você deseja criptografar ou descriptografar'
+    }
   }
-  else imagem.src = 'images/fox-g8ef2924b6_640.png'
 }
