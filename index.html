@@ -15,7 +15,10 @@
     <main>
       <div class="container">
         <section class="tela-texto">
-          <textarea placeholder="Digite o Texto aqui"></textarea>
+          <textarea
+            placeholder="Digite o Texto aqui"
+            oninput="trocarImagem()"
+          ></textarea>
           <div class="botoes">
             <button onclick="lerMensagem()">Criptografar</button>
             <button>Descriptografar</button>
