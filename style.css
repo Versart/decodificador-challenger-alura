@@ -16,16 +16,18 @@ section {
 
 .tela-texto {
   width: 37.5rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 25rem;
+  
 }
 .tela-criptografia {
   width: 25rem;
+  height: 25rem;
   text-align: center;
   padding: 5px;
-  height: 25rem;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
