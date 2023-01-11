@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 .container {
   width: 58.75rem;
@@ -22,15 +22,21 @@ section {
   justify-content: space-between;
   
 }
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
 .tela-criptografia {
   width: 25rem;
   height: 25rem;
   text-align: center;
   padding: 5px;
-  
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  border-radius: 10px;
 }
 .img-criptografia {
   width: 300px;
