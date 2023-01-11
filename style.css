@@ -1,0 +1,18 @@
+.container {
+  width: 58.75rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+section {
+  border: 1px solid red;
+}
+.tela-criptografia {
+  text-align: center;
+  padding: 5px;
+}
+.img-criptografia {
+  width: 300px;
+}
+

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Decodificador</title>
   </head>
   <body>
@@ -11,18 +12,22 @@
       <img src="images/Vector.svg" />
     </header>
     <main>
-      <section>
-        <textarea placeholder="Digite o Texto aqui"></textarea>
-        <button>Criptografar</button>
-        <button>Descriptografar</button>
-      </section>
-      <section>
-        <div>
-          <img src="images/fox-g8ef2924b6_640.png" />
+      <div class="container">
+        <section>
+          <textarea placeholder="Digite o Texto aqui"></textarea>
+          <div class="botoes">
+            <button>Criptografar</button>
+            <button>Descriptografar</button>
+          </div>
+        </section>
+        <section class="tela-criptografia">
+          <div>
+            <img src="images/fox-g8ef2924b6_640.png" class="img-criptografia" />
+          </div>
           <p>Nenhuma mensagem encontrada</p>
           <p>Digite o texto que você deseja criptografar e descriptografar</p>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   </body>
 </html>
