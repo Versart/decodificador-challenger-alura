@@ -38,15 +38,16 @@ section {
   justify-content: space-around;
   border-radius: 10px;
 }
-
-.tela-criptografia p:first-child {
+.mensagem-criada {
+  font-size: 1.3rem;
+}
+.aviso1 {
   font-weight: bold;
   font-size: 2rem;
 }
-.tela-criptografia p:last-child {
+.aviso2 {
   font-size: 0.9rem;
 }
-
 .img-criptografia {
   width: 300px;
 }
