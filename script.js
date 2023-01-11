@@ -17,9 +17,11 @@ function lerMensagem() {
   mensagem = mensagem.join('')
 }
 
-function trocarImagem() {
+function alterarTelaCriptografia() {
   let imagem = document.getElementsByClassName('img-criptografia')[0]
-  if (document.querySelector('textarea').value.trim().length > 0)
+  let 
+  if (document.querySelector('textarea').value.trim().length > 0){
     imagem.src = 'images/fox-g452e24e6a_640.png'
+  }
   else imagem.src = 'images/fox-g8ef2924b6_640.png'
 }
