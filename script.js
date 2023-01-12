@@ -28,6 +28,28 @@ function criptografarMensagem() {
   campoMensagem.innerHTML = mensagem
 }
 
+function descriptografarMensagem() {
+  let caracteresParaAlterar = ['ai', 'enter', 'imes', 'ober', 'ufat']
+  let mensagem = document
+    .querySelector('textarea')
+    .value.replace('enter', 'e')
+    .replace('imes', 'i')
+    .replace('ai', 'a')
+    .replace('ober', 'o')
+    .replace('ufat', 'u')
+
+  let imagem = document.getElementsByClassName('img-criptografia')[0]
+  let informacoes = document.getElementsByTagName('p')
+
+  imagem.style.display = 'none'
+  for (let i = 1; i < informacoes.length - 1; i++) {
+    informacoes[i].style.display = 'none'
+    informacoes[i + 1].style.display = 'none'
+  }
+  let campoMensagem = document.getElementsByClassName('mensagem-criada')[0]
+  campoMensagem.style.display = 'block'
+  campoMensagem.innerHTML = mensagem
+}
 function alterarTelaCriptografia() {
   let imagem = document.getElementsByClassName('img-criptografia')[0]
   let informacoes = document.getElementsByTagName('p')
