@@ -99,6 +99,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 5px 5px black;
   /*background-color: rgb(236, 156, 8);*/

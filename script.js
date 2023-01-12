@@ -3,15 +3,46 @@ var button = document
 function criptografarMensagem() {
   let mensagem = document.querySelector('textarea').value.split('')
   if (mensagem.join()) {
-    let caracteresParaAlterar = ['a', 'e', 'i', 'o', 'u']
+    let caracteresParaAlterar = [
+      'a',
+      'e',
+      'i',
+      'o',
+      'u',
+      'A',
+      'E',
+      'I',
+      'O',
+      'U'
+    ]
     for (let i = 0; i < mensagem.length; i++) {
       for (let j = 0; j < caracteresParaAlterar.length; j++) {
         if (mensagem[i] == caracteresParaAlterar[j])
-          if (caracteresParaAlterar[j] == 'a') mensagem[i] = 'ai'
-          else if (caracteresParaAlterar[j] == 'e') mensagem[i] = 'enter'
-          else if (caracteresParaAlterar[j] == 'i') mensagem[i] = 'imes'
-          else if (caracteresParaAlterar[j] == 'o') mensagem[i] = 'ober'
-          else if (caracteresParaAlterar[j] == 'u') mensagem[i] = 'ufat'
+          if (
+            caracteresParaAlterar[j] == 'a' ||
+            caracteresParaAlterar[j] == 'A'
+          )
+            mensagem[i] = 'ai'
+          else if (
+            caracteresParaAlterar[j] == 'e' ||
+            caracteresParaAlterar[j] == 'E'
+          )
+            mensagem[i] = 'enter'
+          else if (
+            caracteresParaAlterar[j] == 'i' ||
+            caracteresParaAlterar[j] == 'I'
+          )
+            mensagem[i] = 'imes'
+          else if (
+            caracteresParaAlterar[j] == 'o' ||
+            caracteresParaAlterar[j] == 'O'
+          )
+            mensagem[i] = 'ober'
+          else if (
+            caracteresParaAlterar[j] == 'u' ||
+            caracteresParaAlterar[j] == 'U'
+          )
+            mensagem[i] = 'ufat'
       }
     }
     mensagem = mensagem.join('')
@@ -26,17 +57,19 @@ function criptografarMensagem() {
     let campoMensagem = document.getElementsByClassName('mensagem-criada')[0]
     campoMensagem.style.display = 'block'
     campoMensagem.innerHTML = mensagem
+    let botaoCopiar = (document.querySelector('.copiar').style.display =
+      'block')
   }
 }
 
 function descriptografarMensagem() {
   let mensagem = document
     .querySelector('textarea')
-    .value.replace(/enter/g, 'e')
-    .replace(/imes/g, 'i')
-    .replace(/ai/g, 'a')
-    .replace(/ober/g, 'o')
-    .replace(/ufat/g, 'u')
+    .value.replace(/enter/i, 'e')
+    .replace(/imes/i, 'i')
+    .replace(/ai/i, 'a')
+    .replace(/ober/i, 'o')
+    .replace(/ufat/i, 'u')
   if (mensagem) {
     let imagem = document.getElementsByClassName('img-criptografia')[0]
     let informacoes = document.getElementsByTagName('p')
@@ -49,6 +82,8 @@ function descriptografarMensagem() {
     let campoMensagem = document.getElementsByClassName('mensagem-criada')[0]
     campoMensagem.style.display = 'block'
     campoMensagem.innerHTML = mensagem
+    let botaoCopiar = (document.querySelector('.copiar').style.display =
+      'block')
   }
 }
 
