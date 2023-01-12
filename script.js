@@ -92,13 +92,13 @@ function alterarTelaCriptografia() {
   let informacoes = document.getElementsByTagName('p')
   if (document.querySelector('textarea').value.trim().length > 0) {
     imagem.src = 'images/fox-g452e24e6a_640.png'
-    for (let i = 2; i < informacoes.length - 1; i++) {
+    for (let i = 2; i < informacoes.length - 2; i++) {
       informacoes[i].innerHTML = '...............'
       informacoes[i + 1].innerHTML = ''
     }
   } else {
     imagem.src = 'images/fox-g8ef2924b6_640.png'
-    for (let i = 2; i < informacoes.length - 1; i++) {
+    for (let i = 2; i < informacoes.length - 2; i++) {
       informacoes[i].innerHTML = 'Nenhuma mensagem encontrada'
       informacoes[i + 1].innerHTML =
         'Digite o texto que você deseja criptografar ou descriptografar'
