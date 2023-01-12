@@ -65,11 +65,11 @@ function criptografarMensagem() {
 function descriptografarMensagem() {
   let mensagem = document
     .querySelector('textarea')
-    .value.replace(/enter/i, 'e')
-    .replace(/imes/i, 'i')
-    .replace(/ai/i, 'a')
-    .replace(/ober/i, 'o')
-    .replace(/ufat/i, 'u')
+    .value.replace(/enter/gi, 'e')
+    .replace(/imes/gi, 'i')
+    .replace(/ai/gi, 'a')
+    .replace(/ober/gi, 'o')
+    .replace(/ufat/gi, 'u')
   if (mensagem) {
     let imagem = document.getElementsByClassName('img-criptografia')[0]
     let informacoes = document.getElementsByTagName('p')
@@ -104,4 +104,10 @@ function alterarTelaCriptografia() {
         'Digite o texto que você deseja criptografar ou descriptografar'
     }
   }
+}
+
+function copiar() {
+  let texto = document.querySelector('.mensagem-criada').textContent
+  navigator.clipboard.writeText(texto)
+  alert('Mensagem copiada')
 }
