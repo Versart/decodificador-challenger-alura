@@ -32,11 +32,11 @@ function descriptografarMensagem() {
   let caracteresParaAlterar = ['ai', 'enter', 'imes', 'ober', 'ufat']
   let mensagem = document
     .querySelector('textarea')
-    .value.replace('enter', 'e')
-    .replace('imes', 'i')
-    .replace('ai', 'a')
-    .replace('ober', 'o')
-    .replace('ufat', 'u')
+    .value.replace(/enter/g, 'e')
+    .replace(/imes/g, 'i')
+    .replace(/ai/g, 'a')
+    .replace(/ober/g, 'o')
+    .replace(/ufat/g, 'u')
 
   let imagem = document.getElementsByClassName('img-criptografia')[0]
   let informacoes = document.getElementsByTagName('p')
