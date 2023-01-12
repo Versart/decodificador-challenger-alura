@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <img src="images/Vector.svg" />
+      <h1>Encriptador/Descritografador</h1>
     </header>
     <main>
       <div class="container">
@@ -18,7 +18,10 @@
           <textarea
             placeholder="Digite o Texto aqui"
             oninput="alterarTelaCriptografia()"
+            cols="100"
+            rows="100"
           ></textarea>
+          <p>Apenas Letras sem acento!</p>
           <div class="botoes">
             <button onclick="criptografarMensagem()">Criptografar</button>
             <button onclick="descriptografarMensagem()">Descriptografar</button>
