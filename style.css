@@ -8,18 +8,6 @@ body {
   background-color: whitesmoke;
 }
 
-header {
-  background-color: rgb(210, 202, 241);
-  padding: .625rem;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 3.125rem;
-  color: black;
-  margin: .9375rem 0;
-}
-
 .container {
   width: 58.75rem;
   display: flex;
@@ -136,7 +124,7 @@ footer {
 footer ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content:space-evenly;
 }
 footer a {
   text-decoration: none;
