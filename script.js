@@ -50,7 +50,7 @@ function criptografarMensagem() {
     let informacoes = document.getElementsByTagName('p')
 
     imagem.style.display = 'none'
-    for (let i = 1; i < informacoes.length - 1; i++) {
+    for (let i = 2; i < informacoes.length - 2; i++) {
       informacoes[i].style.display = 'none'
       informacoes[i + 1].style.display = 'none'
     }
@@ -75,7 +75,7 @@ function descriptografarMensagem() {
     let informacoes = document.getElementsByTagName('p')
 
     imagem.style.display = 'none'
-    for (let i = 1; i < informacoes.length - 1; i++) {
+    for (let i = 2; i < informacoes.length - 2; i++) {
       informacoes[i].style.display = 'none'
       informacoes[i + 1].style.display = 'none'
     }
@@ -86,18 +86,20 @@ function descriptografarMensagem() {
       'block')
   }
 }
-
+var auxImagem = false
 function alterarTelaCriptografia() {
   let imagem = document.getElementsByClassName('img-criptografia')[0]
   let informacoes = document.getElementsByTagName('p')
   if (document.querySelector('textarea').value.trim().length > 0) {
-    imagem.src = 'images/fox-g452e24e6a_640.png'
+    imagem.src = 'images/engrenagem.gif'
+
     for (let i = 2; i < informacoes.length - 2; i++) {
       informacoes[i].innerHTML = '...............'
       informacoes[i + 1].innerHTML = ''
     }
   } else {
-    imagem.src = 'images/fox-g8ef2924b6_640.png'
+    imagem.src = ''
+    auxImagem = false
     for (let i = 2; i < informacoes.length - 2; i++) {
       informacoes[i].innerHTML = 'Nenhuma mensagem encontrada'
       informacoes[i + 1].innerHTML =
