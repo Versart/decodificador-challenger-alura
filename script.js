@@ -1,5 +1,3 @@
-var button = document
-
 function criptografarMensagem() {
   let mensagem = document.querySelector('textarea').value.split('')
   if (mensagem.join()) {
