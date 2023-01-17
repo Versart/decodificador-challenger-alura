@@ -44,7 +44,7 @@ function criptografarMensagem() {
       }
     }
     mensagem = mensagem.join('')
-    let imagem = document.getElementsByClassName('img-criptografia')[0]
+    let imagem = pegarImagemCriptografia()
     let informacoes = document.getElementsByTagName('p')
 
     imagem.style.display = 'none'
@@ -69,7 +69,7 @@ function descriptografarMensagem() {
     .replace(/ober/gi, 'o')
     .replace(/ufat/gi, 'u')
   if (mensagem) {
-    let imagem = document.getElementsByClassName('img-criptografia')[0]
+    let imagem = pegarImagemCriptografia()
     let informacoes = document.getElementsByTagName('p')
 
     imagem.style.display = 'none'
@@ -86,7 +86,7 @@ function descriptografarMensagem() {
 }
 var auxImagem = false
 function alterarTelaCriptografia() {
-  let imagem = document.getElementsByClassName('img-criptografia')[0]
+  let imagem = pegarImagemCriptografia()
   let informacoes = document.getElementsByTagName('p')
   if (document.querySelector('textarea').value.trim().length > 0) {
     imagem.src = 'images/engrenagem.gif'
@@ -110,4 +110,8 @@ function copiar() {
   let texto = document.querySelector('.mensagem-criada').textContent
   navigator.clipboard.writeText(texto)
   alert('Mensagem copiada')
+}
+
+function pegarImagemCriptografia() {
+  return document.getElementsByClassName('img-criptografia')[0]
 }
