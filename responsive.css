@@ -62,7 +62,9 @@
       display:block;
       width: 15.625rem;  
    }
-
+   .tela-criptografia {
+      height: auto;
+   }
    button {
       width: 12.5rem;
    }
