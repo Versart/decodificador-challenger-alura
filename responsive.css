@@ -1,3 +1,52 @@
-@media screen and(max-width: 720px) {
-  
+@media screen and (max-width: 960px) {
+
+   .container {
+      display:block;
+      width: 37.5rem;  
+   }
+
+   .tela-texto {
+     margin: 0 0;
+   }
+
+   .tela-criptografia {
+      height: 5rem;
+      width: 100%;
+   }
+
+   .tela-criptografia img{
+      display: none;
+   }
+   
+}
+
+
+@media screen and (max-width: 620px) {
+
+   .container {
+      display:block;
+      width: 33.75rem;  
+   }
+   .tela-texto {
+      width: 100%;
+   }
+   .tela-criptografia {
+      width: 100%;
+   }
+   .botoes {
+      flex-direction: column;
+      align-items: center;
+   }
+   .botoes button:nth-child(1) {
+      margin-bottom: 1.25rem;
+   }
+   button {
+      width: 25rem;
+      
+   }
+
+}
+
+@media screen and (max-width: 500px) {
+   
 }
