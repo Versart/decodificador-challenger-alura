@@ -47,6 +47,23 @@
 
 }
 
-@media screen and (max-width: 500px) {
-   
+@media screen and (max-width: 560px) {
+   .container {
+      display:block;
+      width: 25rem;  
+   }
+   button {
+      width: 18.75rem;
+   }
+}
+
+@media screen and (max-width: 420px) {
+   .container {
+      display:block;
+      width: 15.625rem;  
+   }
+
+   button {
+      width: 12.5rem;
+   }
 }
