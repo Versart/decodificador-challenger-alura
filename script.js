@@ -48,7 +48,7 @@ function criptografarMensagem() {
     let informacoes = document.getElementsByTagName('p')
 
     imagem.style.display = 'none'
-    for (let i = 2; i < informacoes.length - 2; i++) {
+    for (let i = 1; i < informacoes.length - 2; i++) {
       informacoes[i].style.display = 'none'
       informacoes[i + 1].style.display = 'none'
     }
@@ -73,7 +73,7 @@ function descriptografarMensagem() {
     let informacoes = document.getElementsByTagName('p')
 
     imagem.style.display = 'none'
-    for (let i = 2; i < informacoes.length - 2; i++) {
+    for (let i = 1; i < informacoes.length - 2; i++) {
       informacoes[i].style.display = 'none'
       informacoes[i + 1].style.display = 'none'
     }
