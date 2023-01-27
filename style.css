@@ -41,6 +41,7 @@ textarea {
   color: black;
   resize:none;
   background-color: whitesmoke;
+  outline: none;
 }
 .instrucao {
   font-weight: bold;
